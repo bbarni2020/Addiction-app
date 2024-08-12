@@ -1,2 +1,3 @@
-# Addiction-app
+# Addiction app
 An app which helps people get over their addictions
+📱IOS
