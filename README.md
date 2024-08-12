@@ -1,18 +1,18 @@
 # 📱 Addiction App
 
-An app designed to help people overcome their addictions by tracking progress and providing daily motivation. 📱 *iOS Only*
+This is a solution that I’m currently working on that is designed to help people tackle addiction through accountability and daily motivation. *iOS Only*
 
-## 💡 Idea
+## 💡 Concept
 
-I wanted to create an app that supports people in their journey to overcome addictions by tracking their progress and keeping them motivated.
+I’d like to utilize an app to help people overcome addiction. The idea is to give addicts a daily progress tracker. It's the accountability and motivation that is necessary for them to succeed.
 
 ## 📝 Plan
 
-- **Progress Calendar**: Users will have a calendar that visually tracks their progress. Each day will be marked in green if they succeed, or red if they don’t.
-- **Motivational Notifications**: Daily motivational notifications will be sent to encourage users to stay on track.
-- **Streaks**: Users can set goals and build streaks. The streak will reset if they fail to meet their goals.
-- **Prototype & Development**: I will start by creating a prototype in Python, and then develop the actual app using SwiftUI.
+- **Progress Calendar**: A calendar that visualizes progress, with days marked in green if they met their goal or red if they had a slip-up.
+- **Motivational Notifications**: Daily motivational notifications that are encouraging and focused on staying accountable to themselves.
+- **Streaks**: Goals in the app to build streaks. When they meet their goal, they continue their streak. If they don’t, their streak ends.
+- **Prototype & Development**: I plan to first create a prototype using Python. I’ll then jump into developing my iOS app using SwiftUI.
 
 ## 🔒 Privacy
 
-All data will be stored locally on the device, ensuring privacy. The app will also be open-source.
+All data will remain local on the user’s device because I want to respect the user’s privacy. The app would be open source.
