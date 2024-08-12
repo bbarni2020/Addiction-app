@@ -1,4 +1,4 @@
-# 🛠️ Addiction App
+# 📱 Addiction App
 
 An app designed to help people overcome their addictions by tracking progress and providing daily motivation. 📱 *iOS Only*
 
