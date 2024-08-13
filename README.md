@@ -16,3 +16,5 @@ I’d like to utilize an app to help people overcome addiction. The idea is to g
 ## 🔒 Privacy
 
 All data will remain local on the user’s device because I want to respect the user’s privacy. The app would be open source.
+
+## 🏁 Goals
