@@ -19,6 +19,7 @@ All data will remain local on the user’s device because I want to respect the 
 
 ## 🏁 Goals
 
+
 - ✅ Project desription
 - ☑️ Python prototype
 - ☑️ Design the app interface
