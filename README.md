@@ -21,8 +21,8 @@ All data will remain local on the user’s device because I want to respect the 
 
 
 - ✅ Project desription
-- ☑️ Python prototype
-- ☑️ Design the app interface
+- ✅ Python prototype
+- ✅ Design the app interface
 - ☑️ Write the app's front end
 - ☑️ Write the app's back end
 - ☑️ Make the icon name of the app
