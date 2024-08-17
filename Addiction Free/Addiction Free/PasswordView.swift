@@ -34,7 +34,7 @@ struct PasswordView: View {
             guard passcode.count == 6 else { return }
             Task {
                 try? await Task.sleep(nanoseconds: 125_000_000)
-                isAuthenticated = passcode == "111111"
+                isAuthenticated = passcode == "123456"
                 passcode = ""
             }
         }
