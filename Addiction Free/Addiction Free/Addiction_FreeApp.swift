@@ -11,7 +11,7 @@ import SwiftUI
 struct Addiction_FreeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PasswordView()
         }
     }
 }

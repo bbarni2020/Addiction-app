@@ -12,7 +12,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Text("Home")
-                    .font(.custom(<#String#>, size: 22))
+                    .font(.system(size: 22))
                     .foregroundColor(.white)
                     .padding()
                     .background(Color.primary)
@@ -20,14 +20,14 @@ struct ContentView: View {
                 Spacer()
                 
                 Text("Are you still doing no cigarette?🚭")
-                    .font(.custom(<#String#>, size: 18))
+                    .font(.system(size: 18))
                     .padding(.bottom, 12)
                 
                 Button(action: {
                     print("Button pressed ...")
                 }) {
                     Text("Still doing it")
-                        .font(.custom(<#String#>, size: 14))
+                        .font(.system(size: 14))
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.green)
@@ -39,7 +39,7 @@ struct ContentView: View {
                     print("Button pressed ...")
                 }) {
                     Text("I failed")
-                        .font(.custom(<#String#>, size: 14))
+                        .font(.system(size: 14))
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.red)
@@ -51,7 +51,7 @@ struct ContentView: View {
                     print("Button pressed ...")
                 }) {
                     Text("Add new addiction")
-                        .font(.custom(<#String#>, size: 14))
+                        .font(.system(size: 14))
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.primary)
