@@ -18,7 +18,7 @@ struct NumberPadView: View {
         LazyVGrid(columns: colums){
             ForEach(1...9, id: \.self) {index in
                 Button {
-                    
+                    addValue(index)
                 } label: {
                     Text("\(index)")
                         .font(.title)
@@ -28,7 +28,7 @@ struct NumberPadView: View {
                 }
             }
             Button {
-                
+                removeValue()
             } label: {
                 Image(systemName: "delete.backward")
                     .font(.title)
@@ -37,7 +37,7 @@ struct NumberPadView: View {
                     .contentShape(.rect)
             }
             Button {
-                
+                addValue(0)
             } label: {
                 Text("0")
                     .font(.title)
@@ -58,6 +58,16 @@ struct NumberPadView: View {
         }
         .foregroundStyle(.primary)
         
+    }
+    private func addValue(_ value: Int) {
+        if passcode.count < 6 {
+            passcode += "\(value)"
+        }
+    }
+    private func removeValue() {
+        if !passcode.isEmpty {
+            passcode.removeLast()
+        }
     }
 }
 

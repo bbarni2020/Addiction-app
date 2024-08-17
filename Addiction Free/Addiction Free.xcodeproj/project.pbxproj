@@ -10,6 +10,7 @@
 		0511EE832C70CF9D0047AE5E /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511EE822C70CF9D0047AE5E /* PasswordView.swift */; };
 		0511EE852C70CFCC0047AE5E /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511EE842C70CFCC0047AE5E /* NumberPadView.swift */; };
 		0511EE872C70CFE90047AE5E /* PasscodeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511EE862C70CFE80047AE5E /* PasscodeIndicatorView.swift */; };
+		0511EE8A2C70E3830047AE5E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511EE892C70E3830047AE5E /* Home.swift */; };
 		054388E12C6FC37800330673 /* Addiction_FreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054388E02C6FC37800330673 /* Addiction_FreeApp.swift */; };
 		054388E32C6FC37800330673 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054388E22C6FC37800330673 /* ContentView.swift */; };
 		054388E52C6FC37D00330673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 054388E42C6FC37D00330673 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		0511EE822C70CF9D0047AE5E /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		0511EE842C70CFCC0047AE5E /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 		0511EE862C70CFE80047AE5E /* PasscodeIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeIndicatorView.swift; sourceTree = "<group>"; };
+		0511EE892C70E3830047AE5E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		054388DD2C6FC37800330673 /* Addiction Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Addiction Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		054388E02C6FC37800330673 /* Addiction_FreeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addiction_FreeApp.swift; sourceTree = "<group>"; };
 		054388E22C6FC37800330673 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			name = PasswordLogin;
 			sourceTree = "<group>";
 		};
+		0511EE882C70E3700047AE5E /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				0511EE892C70E3830047AE5E /* Home.swift */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
 		054388D42C6FC37800330673 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		054388DF2C6FC37800330673 /* Addiction Free */ = {
 			isa = PBXGroup;
 			children = (
+				0511EE882C70E3700047AE5E /* HomePage */,
 				0511EE812C70CF370047AE5E /* PasswordLogin */,
 				054388E02C6FC37800330673 /* Addiction_FreeApp.swift */,
 				054388E22C6FC37800330673 /* ContentView.swift */,
@@ -282,6 +293,7 @@
 				0511EE872C70CFE90047AE5E /* PasscodeIndicatorView.swift in Sources */,
 				0511EE832C70CF9D0047AE5E /* PasswordView.swift in Sources */,
 				054388E12C6FC37800330673 /* Addiction_FreeApp.swift in Sources */,
+				0511EE8A2C70E3830047AE5E /* Home.swift in Sources */,
 				0511EE852C70CFCC0047AE5E /* NumberPadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
