@@ -45,15 +45,15 @@ struct NumberPadView: View {
                     .padding(.vertical, 16)
                     .contentShape(.rect)
             }
-            Button {
-                
-            } label: {
-                Image(systemName: "faceid")
-                    .font(.title)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
-                    .contentShape(.rect)
-            }
+            //Button {
+            //
+            //} label: {
+            //    Image(systemName: "faceid")
+            //        .font(.title)
+            //        .frame(maxWidth: .infinity)
+            //        .padding(.vertical, 16)
+            //        .contentShape(.rect)
+            //weh}
             
         }
         .foregroundStyle(.primary)

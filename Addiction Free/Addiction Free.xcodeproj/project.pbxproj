@@ -18,6 +18,9 @@
 		054388F22C6FC37D00330673 /* Addiction_FreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054388F12C6FC37D00330673 /* Addiction_FreeTests.swift */; };
 		054388FC2C6FC37D00330673 /* Addiction_FreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054388FB2C6FC37D00330673 /* Addiction_FreeUITests.swift */; };
 		054388FE2C6FC37D00330673 /* Addiction_FreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054388FD2C6FC37D00330673 /* Addiction_FreeUITestsLaunchTests.swift */; };
+		05D05BE62C76664800D5BF9A /* AddictionTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BE52C76664800D5BF9A /* AddictionTrack.swift */; };
+		05D05BEC2C766A2C00D5BF9A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BEB2C766A2C00D5BF9A /* Activity.swift */; };
+		05D05BF02C766A8500D5BF9A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BEF2C766A8500D5BF9A /* Status.swift */; };
 		05EA96182C6FD2D200FB43E8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05EA96172C6FD2D200FB43E8 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,9 @@
 		054388F72C6FC37D00330673 /* Addiction FreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Addiction FreeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		054388FB2C6FC37D00330673 /* Addiction_FreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addiction_FreeUITests.swift; sourceTree = "<group>"; };
 		054388FD2C6FC37D00330673 /* Addiction_FreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addiction_FreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		05D05BE52C76664800D5BF9A /* AddictionTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddictionTrack.swift; sourceTree = "<group>"; };
+		05D05BEB2C766A2C00D5BF9A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		05D05BEF2C766A8500D5BF9A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		05EA96172C6FD2D200FB43E8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				0511EE892C70E3830047AE5E /* Home.swift */,
+				05D05BE52C76664800D5BF9A /* AddictionTrack.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 		054388DF2C6FC37800330673 /* Addiction Free */ = {
 			isa = PBXGroup;
 			children = (
+				05D05BEA2C766A1A00D5BF9A /* Models */,
 				0511EE882C70E3700047AE5E /* HomePage */,
 				0511EE812C70CF370047AE5E /* PasswordLogin */,
 				054388E02C6FC37800330673 /* Addiction_FreeApp.swift */,
@@ -156,6 +164,15 @@
 				054388FD2C6FC37D00330673 /* Addiction_FreeUITestsLaunchTests.swift */,
 			);
 			path = "Addiction FreeUITests";
+			sourceTree = "<group>";
+		};
+		05D05BEA2C766A1A00D5BF9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05D05BEB2C766A2C00D5BF9A /* Activity.swift */,
+				05D05BEF2C766A8500D5BF9A /* Status.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +311,9 @@
 				0511EE832C70CF9D0047AE5E /* PasswordView.swift in Sources */,
 				054388E12C6FC37800330673 /* Addiction_FreeApp.swift in Sources */,
 				0511EE8A2C70E3830047AE5E /* Home.swift in Sources */,
+				05D05BF02C766A8500D5BF9A /* Status.swift in Sources */,
+				05D05BE62C76664800D5BF9A /* AddictionTrack.swift in Sources */,
+				05D05BEC2C766A2C00D5BF9A /* Activity.swift in Sources */,
 				0511EE852C70CFCC0047AE5E /* NumberPadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
