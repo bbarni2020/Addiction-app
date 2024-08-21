@@ -12,11 +12,11 @@ struct AddictionTrack: View {
     @Environment(\.modelContext) private var modelContext
 
     var body: some View {
-        Button("Add Smoke Workout") {
+        Button("Add Smoke Status") {
             addSmokeWorkout()
         }
         .padding()
-        .navigationTitle("Add Workout")
+        .navigationTitle("Add Status")
     }
 
     func addSmokeWorkout() {
@@ -35,8 +35,8 @@ struct AddictionTrack: View {
             modelContext.insert(smokeActivity)
         }
 
-        let newWorkout = Workout(date: Date())
-        smokeActivity.workouts.append(newWorkout)
+        let newStatus = Status(date: Date())
+        smokeActivity.statuses.append(newStatus)
 
         try? modelContext.save()
     }
