@@ -2,7 +2,7 @@
 //  AddictionTrack.swift
 //  Addiction Free
 //
-//  Created by ScriptKid on 21/08/2024.
+//  Created by MasterbrosDev, Barnabás on 21/08/2024.
 //
 
 import SwiftUI
@@ -39,6 +39,7 @@ struct AddictionTrack: View {
         smokeActivity.statuses.append(newStatus)
 
         try? modelContext.save()
+        print("Sucess")
     }
 }
 

@@ -2,7 +2,7 @@
 //  Home.swift
 //  Addiction Free
 //
-//  Created by ScriptKid on 17/08/2024.
+//  Created by MasterbrosDev, Barnabás on 17/08/2024.
 //
 
 import SwiftUI

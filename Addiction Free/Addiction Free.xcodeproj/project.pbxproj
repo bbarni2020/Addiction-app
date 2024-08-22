@@ -11,6 +11,9 @@
 		0511EE852C70CFCC0047AE5E /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511EE842C70CFCC0047AE5E /* NumberPadView.swift */; };
 		0511EE872C70CFE90047AE5E /* PasscodeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511EE862C70CFE80047AE5E /* PasscodeIndicatorView.swift */; };
 		0511EE8A2C70E3830047AE5E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511EE892C70E3830047AE5E /* Home.swift */; };
+		052E7A6F2C774B3F00436996 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E7A6E2C774B3F00436996 /* CalendarView.swift */; };
+		052E7A712C774B4C00436996 /* CalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E7A702C774B4C00436996 /* CalendarHeader.swift */; };
+		052E7A742C774D5100436996 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E7A732C774D5100436996 /* Date+Extension.swift */; };
 		054388E12C6FC37800330673 /* Addiction_FreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054388E02C6FC37800330673 /* Addiction_FreeApp.swift */; };
 		054388E32C6FC37800330673 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054388E22C6FC37800330673 /* ContentView.swift */; };
 		054388E52C6FC37D00330673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 054388E42C6FC37D00330673 /* Assets.xcassets */; };
@@ -21,7 +24,6 @@
 		05D05BE62C76664800D5BF9A /* AddictionTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BE52C76664800D5BF9A /* AddictionTrack.swift */; };
 		05D05BEC2C766A2C00D5BF9A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BEB2C766A2C00D5BF9A /* Activity.swift */; };
 		05D05BF02C766A8500D5BF9A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BEF2C766A8500D5BF9A /* Status.swift */; };
-		05EA96182C6FD2D200FB43E8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05EA96172C6FD2D200FB43E8 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,9 @@
 		0511EE842C70CFCC0047AE5E /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 		0511EE862C70CFE80047AE5E /* PasscodeIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeIndicatorView.swift; sourceTree = "<group>"; };
 		0511EE892C70E3830047AE5E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		052E7A6E2C774B3F00436996 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		052E7A702C774B4C00436996 /* CalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeader.swift; sourceTree = "<group>"; };
+		052E7A732C774D5100436996 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		054388DD2C6FC37800330673 /* Addiction Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Addiction Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		054388E02C6FC37800330673 /* Addiction_FreeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addiction_FreeApp.swift; sourceTree = "<group>"; };
 		054388E22C6FC37800330673 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,7 +64,6 @@
 		05D05BE52C76664800D5BF9A /* AddictionTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddictionTrack.swift; sourceTree = "<group>"; };
 		05D05BEB2C766A2C00D5BF9A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		05D05BEF2C766A8500D5BF9A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
-		05EA96172C6FD2D200FB43E8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,23 @@
 			name = HomePage;
 			sourceTree = "<group>";
 		};
+		052E7A6D2C774B0900436996 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				052E7A6E2C774B3F00436996 /* CalendarView.swift */,
+				052E7A702C774B4C00436996 /* CalendarHeader.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		052E7A722C774D3500436996 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				052E7A732C774D5100436996 /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		054388D42C6FC37800330673 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +150,8 @@
 		054388DF2C6FC37800330673 /* Addiction Free */ = {
 			isa = PBXGroup;
 			children = (
+				052E7A722C774D3500436996 /* Extensions */,
+				052E7A6D2C774B0900436996 /* Calendar */,
 				05D05BEA2C766A1A00D5BF9A /* Models */,
 				0511EE882C70E3700047AE5E /* HomePage */,
 				0511EE812C70CF370047AE5E /* PasswordLogin */,
@@ -136,7 +159,6 @@
 				054388E22C6FC37800330673 /* ContentView.swift */,
 				054388E42C6FC37D00330673 /* Assets.xcassets */,
 				054388E62C6FC37D00330673 /* Preview Content */,
-				05EA96172C6FD2D200FB43E8 /* Login.storyboard */,
 			);
 			path = "Addiction Free";
 			sourceTree = "<group>";
@@ -281,7 +303,6 @@
 			files = (
 				054388E82C6FC37D00330673 /* Preview Assets.xcassets in Resources */,
 				054388E52C6FC37D00330673 /* Assets.xcassets in Resources */,
-				05EA96182C6FD2D200FB43E8 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,9 +327,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052E7A712C774B4C00436996 /* CalendarHeader.swift in Sources */,
+				052E7A6F2C774B3F00436996 /* CalendarView.swift in Sources */,
 				054388E32C6FC37800330673 /* ContentView.swift in Sources */,
 				0511EE872C70CFE90047AE5E /* PasscodeIndicatorView.swift in Sources */,
 				0511EE832C70CF9D0047AE5E /* PasswordView.swift in Sources */,
+				052E7A742C774D5100436996 /* Date+Extension.swift in Sources */,
 				054388E12C6FC37800330673 /* Addiction_FreeApp.swift in Sources */,
 				0511EE8A2C70E3830047AE5E /* Home.swift in Sources */,
 				05D05BF02C766A8500D5BF9A /* Status.swift in Sources */,

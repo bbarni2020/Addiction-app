@@ -2,7 +2,7 @@
 //  Status.swift
 //  Addiction Free
 //
-//  Created by ScriptKid on 21/08/2024.
+//  Created by MasterbrosDev, Barnabás on 21/08/2024.
 //
 
 import Foundation
