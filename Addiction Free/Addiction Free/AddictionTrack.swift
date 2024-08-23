@@ -39,7 +39,6 @@ struct AddictionTrack: View {
         smokeActivity.statuses.append(newStatus)
 
         try? modelContext.save()
-        print("Sucess")
     }
 }
 

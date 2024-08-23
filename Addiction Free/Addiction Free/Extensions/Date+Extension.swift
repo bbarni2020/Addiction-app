@@ -77,18 +77,15 @@ extension Date {
     
     var calendarDisplayDays: [Date] {
         var days: [Date] = []
-        // Current month days
         for dayOffset in 0..<numberOfDaysInMonth {
             let newDay = Calendar.current.date(byAdding: .day, value: dayOffset, to: startOfMonth)
             days.append(newDay!)
         }
-        // previous month days
         for dayOffset in 0..<startOfPreviousMonth.numberOfDaysInMonth {
             let newDay = Calendar.current.date(byAdding: .day, value: dayOffset, to: startOfPreviousMonth)
             days.append(newDay!)
         }
         
-        // Fixed to accomodate different weekday starts
         return days.filter { $0 >= firstWeekDayBeforeStart && $0 <= endOfMonth }.sorted(by: <)
     }
     
@@ -106,13 +103,8 @@ extension Date {
     var startOfDay: Date {
         Calendar.current.startOfDay(for: self)
     }
-    
-    // Used to generate the mock data for previews
-    // Computed property courtesy of ChatGPT
-    var randomDateWithinLastThreeMonths: Date {
-        let threeMonthsAgo = Calendar.current.date(byAdding: .month, value: -3, to: self)!
-        let randomTimeInterval = TimeInterval.random(in: 0.0..<self.timeIntervalSince(threeMonthsAgo))
-        let randomDate = threeMonthsAgo.addingTimeInterval(randomTimeInterval)
-        return randomDate
+
+    var isToday: Bool {
+        Calendar.current.isDateInToday(self)
     }
 }

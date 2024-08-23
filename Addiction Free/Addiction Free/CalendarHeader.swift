@@ -21,14 +21,14 @@ struct CalendarHeader: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Picker("", selection: $selectedActivity) {
-                    Text("All").tag(nil as Activity?)
-                    ForEach(activities) { activity in
-                        Text(activity.name).tag(activity as Activity?)
-                    }
-                }
-                .buttonStyle(.borderedProminent)
                 HStack {
+                    Picker("", selection: $selectedActivity) {
+                        Text("All").tag(nil as Activity?)
+                        ForEach(activities) { activity in
+                            Text(activity.name).tag(activity as Activity?)
+                        }
+                    }
+                    .buttonStyle(.borderedProminent)
                     Picker("", selection: $selectedYear) {
                         ForEach(years, id:\.self) { year in
                             Text(String(year))
@@ -41,7 +41,7 @@ struct CalendarHeader: View {
                     }
                 }
                 .buttonStyle(.bordered)
-                CalendarView()
+                CalendarView(date: monthDate, selectedActivity: selectedActivity)
             }
             .navigationTitle("Tallies")
         }

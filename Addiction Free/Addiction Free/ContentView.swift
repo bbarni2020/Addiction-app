@@ -22,6 +22,10 @@ struct ContentView: View {
                         .tabItem {
                             Label("MyPage", systemImage: "pencil.tip")
                         }
+                    CalendarHeader()
+                        .tabItem {
+                            Label("Calendar", systemImage: "calendar")
+                        }
                 }
             } else {
                 PasswordView(isAuthenticated: $isAuthenticated)
