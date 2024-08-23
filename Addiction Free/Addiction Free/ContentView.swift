@@ -9,24 +9,11 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State private var isAuthenticated = false
+    @State private var isAuthenticated = true
     var body: some View {
         ZStack {
             if isAuthenticated {
-                TabView {
                     Home()
-                        .tabItem {
-                            Label("Home", systemImage: "house")
-                        }
-                    AddictionTrack()
-                        .tabItem {
-                            Label("MyPage", systemImage: "pencil.tip")
-                        }
-                    CalendarHeader()
-                        .tabItem {
-                            Label("Calendar", systemImage: "calendar")
-                        }
-                }
             } else {
                 PasswordView(isAuthenticated: $isAuthenticated)
                 }

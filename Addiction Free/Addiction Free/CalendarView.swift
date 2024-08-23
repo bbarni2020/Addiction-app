@@ -31,14 +31,14 @@ struct CalendarView: View {
     }
     
     var body: some View {
-        let color = Color.blue
+        let color = Color.green
         
         VStack {
             HStack {
                 ForEach(daysOfWeek, id: \.self) { day in
                     Text(day)
                         .fontWeight(.black)
-                        .foregroundStyle(color)
+                        .foregroundStyle(.white) //secondary
                         .frame(maxWidth: .infinity)
                 }
             }
