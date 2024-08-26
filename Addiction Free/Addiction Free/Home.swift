@@ -30,6 +30,9 @@ struct Home: View {
                 }
             }
         }
+        .onAppear(perform: {
+            let _: Void = UserDefaults.standard.set(true, forKey: "firstTime")
+        })
     }
 }
 

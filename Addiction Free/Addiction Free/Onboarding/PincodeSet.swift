@@ -14,6 +14,8 @@ struct PincodeSet: View {
     @State private var Fpasscode = ""
     @State private var Spasscode = ""
     @State var wrong = false
+    let screen = UIScreen.main.bounds.width
+    let isFirstTime = UserDefaults.standard.bool(forKey: "firstTime")
     var body: some View {
         if ready == false {
                 VStack {
@@ -48,30 +50,29 @@ struct PincodeSet: View {
                 }
                 .onChange(of: passcode, {oldValue, newValue in
                     make()})
-                .onAppear{
-                    KeychainHelper.shared.deletePinCode()
-                }
             } else {
+                NavigationView {
                     VStack {
                         Image(systemName: "checkmark.circle")
-                            .foregroundStyle(Color.primary)
-                            .padding(.all)
-                            .scaledToFit()
-                            .frame(width: 1000)
+                            .foregroundStyle(Color.green)
+                            .font(.system(size: screen * 0.17))
                         Text("The pincode is saved successfully.")
                             .font(.headline)
                             .padding()
-                        Button {
-                            
-                        } label: {
-                            Text("Next")
-                                .fontWeight(.bold)
-                                .padding()
-                                .background(Color.primary)
-                                .foregroundStyle(Color.secondary)
-                                .cornerRadius(8)
-                                .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                        if isFirstTime {
+                            //nothing
+                            } else {
+                            NavigationLink(destination: Home()) {
+                                Text("Next")
+                                    .fontWeight(.bold)
+                                    .padding()
+                                    .background(Color.primary)
+                                    .foregroundStyle(Color.secondary)
+                                    .cornerRadius(8)
+                                    .frame(width: screen * 0.7)
+                            }
                         }
+                    }
                 }
             }
         }
@@ -88,6 +89,7 @@ struct PincodeSet: View {
                     Spasscode = passcode
                     passcode = ""
                     if Spasscode == Fpasscode {
+                        KeychainHelper.shared.deletePinCode()
                         KeychainHelper.shared.savePinCode(Spasscode)
                         ready = true
                     } else {

@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct SettingsView: View {
     @State private var isFaceIDEnabled: Bool = false
     @State private var isNotificationsEnabled: Bool = true
-    
+    @Environment(\.modelContext) private var modelContext
+    @State private var showingAlert = false
     var body: some View {
         NavigationView {
             VStack{
@@ -29,7 +31,7 @@ struct SettingsView: View {
                         //    Text("Face ID")
                         //}
                         
-                        Button(action: resetPIN) {
+                        NavigationLink(destination: PincodeSet()) {
                             Text("Reset PIN")
                                 .foregroundStyle(.blue)
                         }
@@ -39,9 +41,17 @@ struct SettingsView: View {
                         //    Text("Share This App")
                         //}
                     Section(header: Text("Reset")) {
-                        Button(action: deleteAllData) {
+                        Button() {
+                            showingAlert = true
+                        } label: {
                             Text("Delete All Data")
                                 .foregroundStyle(.red)
+                        }
+                        .alert("Are you sure? This action cannot be undone.", isPresented: $showingAlert){
+                            Button("Yes", role: .destructive) {
+                                deleteAllData()
+                            }
+                            Button("No", role: .cancel) {}
                         }
                         
                         Button(action: resetApp) {
@@ -64,12 +74,23 @@ struct SettingsView: View {
         }
     }
     
-    private func resetPIN() {
-        //reset pin
-    }
-    
     private func deleteAllData() {
-        //delete models
+        showingAlert = true
+        let fetchDescriptorForActivities = FetchDescriptor<Activity>()
+                if let activities = try? modelContext.fetch(fetchDescriptorForActivities) {
+                    for activity in activities {
+                        modelContext.delete(activity)
+                    }
+                }
+
+                let fetchDescriptorStatus = FetchDescriptor<Status>()
+                if let statuses = try? modelContext.fetch(fetchDescriptorStatus) {
+                    for status in statuses {
+                        modelContext.delete(status)
+                    }
+                }
+
+                try? modelContext.save()
     }
     
     private func resetApp() {

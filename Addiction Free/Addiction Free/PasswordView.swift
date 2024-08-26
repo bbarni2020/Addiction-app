@@ -10,7 +10,6 @@ import SwiftUI
 struct PasswordView: View {
     @Binding var isAuthenticated: Bool
     @State private var passcode = ""
-    @AppStorage("pincode") private var pincode : String = "111111"
     var body: some View {
         VStack {
             VStack(spacing: 48) {
@@ -33,10 +32,9 @@ struct PasswordView: View {
     }
         private func verifyPasscode() {
             guard passcode.count == 6 else { return }
-            print(pincode)
-            print(passcode)
             Task {
                 try? await Task.sleep(nanoseconds: 125_000_000)
+                let pincode = KeychainHelper.shared.getPinCode()
                 isAuthenticated = passcode == pincode
                 passcode = ""
             }

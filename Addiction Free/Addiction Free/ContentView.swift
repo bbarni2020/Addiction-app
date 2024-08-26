@@ -8,6 +8,8 @@
 import SwiftUI
 import SwiftData
 
+
+let isFirstTime = UserDefaults.standard.bool(forKey: "firstTime")
 struct ContentView: View {
     @State private var isAuthenticated = false
     var body: some View {
@@ -15,8 +17,11 @@ struct ContentView: View {
             if isAuthenticated {
                     Home()
             } else {
-                //PasswordView(isAuthenticated: $isAuthenticated)
-                PincodeSet()
+                if isFirstTime {
+                    PasswordView(isAuthenticated: $isAuthenticated)
+                } else {
+                    PincodeSet()
+                }
                 }
             }
         }
