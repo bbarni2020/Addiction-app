@@ -24,6 +24,8 @@
 		05D05BE62C76664800D5BF9A /* AddictionTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BE52C76664800D5BF9A /* AddictionTrack.swift */; };
 		05D05BEC2C766A2C00D5BF9A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BEB2C766A2C00D5BF9A /* Activity.swift */; };
 		05D05BF02C766A8500D5BF9A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BEF2C766A8500D5BF9A /* Status.swift */; };
+		05ED0F562C7C737C0056F258 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED0F552C7C737C0056F258 /* Color.swift */; };
+		05ED0F582C7C7E760056F258 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED0F572C7C7E760056F258 /* Streak.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		05D05BE52C76664800D5BF9A /* AddictionTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddictionTrack.swift; sourceTree = "<group>"; };
 		05D05BEB2C766A2C00D5BF9A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		05D05BEF2C766A8500D5BF9A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		05ED0F552C7C737C0056F258 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		05ED0F572C7C7E760056F258 /* Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			children = (
 				0511EE892C70E3830047AE5E /* Home.swift */,
 				05D05BE52C76664800D5BF9A /* AddictionTrack.swift */,
+				05ED0F572C7C7E760056F258 /* Streak.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				052E7A732C774D5100436996 /* Date+Extension.swift */,
+				05ED0F552C7C737C0056F258 /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,7 +336,9 @@
 				052E7A712C774B4C00436996 /* CalendarHeader.swift in Sources */,
 				052E7A6F2C774B3F00436996 /* CalendarView.swift in Sources */,
 				054388E32C6FC37800330673 /* ContentView.swift in Sources */,
+				05ED0F582C7C7E760056F258 /* Streak.swift in Sources */,
 				0511EE872C70CFE90047AE5E /* PasscodeIndicatorView.swift in Sources */,
+				05ED0F562C7C737C0056F258 /* Color.swift in Sources */,
 				0511EE832C70CF9D0047AE5E /* PasswordView.swift in Sources */,
 				052E7A742C774D5100436996 /* Date+Extension.swift in Sources */,
 				054388E12C6FC37800330673 /* Addiction_FreeApp.swift in Sources */,

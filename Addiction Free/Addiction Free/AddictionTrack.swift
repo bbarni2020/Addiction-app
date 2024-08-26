@@ -12,11 +12,36 @@ struct AddictionTrack: View {
     @Environment(\.modelContext) private var modelContext
 
     var body: some View {
-        Button("Add Smoke Status") {
-            addSmokeWorkout()
+        VStack{
+            HStack{
+                Button() {
+                    print(UITraitCollection.current.userInterfaceStyle == .light)
+                } label: {
+                    Text("I'm still okay")
+                                .foregroundColor(.white)
+                                .font(.headline)
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                }
+                .background(Color.green.opacity(0.8))
+                .cornerRadius(12)
+                .shadow(color: Color.white.opacity(0.3), radius: 5, x: 0, y: 5)
+                .padding([.top, .leading, .bottom])
+                Button() {
+                    addSmokeWorkout()
+                } label: {
+                    Text("I failed")
+                                .foregroundColor(.white)
+                                .font(.headline)
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                }
+                .background(Color.red.opacity(0.8))
+                .cornerRadius(12)
+                .shadow(color: Color.white.opacity(0.3), radius: 5, x: 0, y: 5) //secondary
+                .padding([.top, .bottom, .trailing])
+            }
         }
-        .padding()
-        .navigationTitle("Add Status")
     }
 
     func addSmokeWorkout() {

@@ -20,8 +20,8 @@ struct CalendarHeader: View {
     let months = Date.fullMonthNames
     var body: some View {
         NavigationStack {
-            VStack {
-                HStack {
+            VStack() {
+                HStack() {
                     Picker("", selection: $selectedActivity) {
                         Text("All").tag(nil as Activity?)
                         ForEach(activities) { activity in
@@ -29,33 +29,17 @@ struct CalendarHeader: View {
                         }
                     }
                     .buttonStyle(.borderedProminent)
-                    Picker("", selection: $selectedYear) {
-                        ForEach(years, id:\.self) { year in
-                            Text(String(year))
-                        }
-                    }
-                    Picker("", selection: $selectedMonth) {
-                        ForEach(months.indices, id: \.self) { index in
-                            Text(months[index]).tag(index + 1)
-                        }
-                    }
                 }
                 .buttonStyle(.bordered)
                 CalendarView(date: monthDate, selectedActivity: selectedActivity)
             }
-            .navigationTitle("Tallies")
-        }
-        .onAppear {
-            years = Array(Set(statuses.map {$0.date.yearInt}.sorted()))
-        }
-        .onChange(of: selectedYear) {
-            updateDate()
+            .navigationBarHidden(true)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
         .onChange(of: selectedMonth) {
             updateDate()
         }
     }
-    
     func updateDate() {
         monthDate = Calendar.current.date(from: DateComponents(year: selectedYear, month: selectedMonth, day: 1))!
     }

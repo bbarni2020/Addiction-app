@@ -13,6 +13,7 @@ struct Home: View {
             VStack {
                 CalendarHeader()
                     .padding(.top, 12)
+                Streak()
                 Text("How have you been doing with staying clear of your addiction?")
                     .font(.headline)
                     .multilineTextAlignment(.center)
@@ -25,7 +26,7 @@ struct Home: View {
             .toolbar {
                 NavigationLink(destination: CalendarHeader()) {
                     Image(systemName: "gear")
-                        .foregroundStyle(Color.white) //secondary
+                        .foregroundStyle(Color.primary)
                 }
             }
         }

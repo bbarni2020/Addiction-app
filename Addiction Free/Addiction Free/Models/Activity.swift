@@ -30,4 +30,17 @@ extension Activity {
         )
         return container
     }
+    var daysSinceLastLog: Int? {
+        let sortedStatus = statuses.sorted { $0.date > $1.date }
+        
+        guard let lastLog = sortedStatus.first else {
+            return nil
+        }
+        
+        // Calculate the difference in days between the last workout and now
+        let calendar = Calendar.current
+        let daysSince = calendar.dateComponents([.day], from: lastLog.date, to: Date()).day
+        
+        return daysSince
+    }
 }

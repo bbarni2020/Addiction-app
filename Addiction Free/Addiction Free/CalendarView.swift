@@ -38,7 +38,7 @@ struct CalendarView: View {
                 ForEach(daysOfWeek, id: \.self) { day in
                     Text(day)
                         .fontWeight(.black)
-                        .foregroundStyle(.white) //secondary
+                        .foregroundStyle(Color.primary)
                         .frame(maxWidth: .infinity)
                 }
             }
@@ -47,7 +47,7 @@ struct CalendarView: View {
                     if day.monthInt == date.monthInt {
                         Text(day.formatted(.dateTime.day()))
                             .fontWeight(.bold)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Color.primary)
                             .frame(maxWidth: .infinity, minHeight: 40)
                             .background(
                                 Circle()
@@ -59,7 +59,7 @@ struct CalendarView: View {
                             .overlay(alignment: .bottomTrailing) {
                                 if let count = counts[day.dayInt] {
                                     Image(systemName: count <= 50 ? "\(count).circle.fill" : "plus.circle.fill")
-                                        .foregroundColor(.secondary)
+                                        .foregroundColor(Color.primary)
                                         .imageScale(.medium)
                                         .background(
                                             Color(.systemBackground)

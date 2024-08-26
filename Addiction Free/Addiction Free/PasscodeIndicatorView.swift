@@ -13,11 +13,11 @@ struct PasscodeIndicatorView: View {
         HStack(spacing: 32) {
             ForEach(0 ..< 6) {index in
                 Circle()
-                    .fill(passcode.count > index ? .primary : Color(.white))
+                    .fill(passcode.count > index ? Color.primary : Color.secondary)
                     .frame(width: 20, height: 20)
                     .overlay {
                         Circle()
-                            .stroke(.black, lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+                            .stroke(Color.primary, lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
                     }
             }
         }

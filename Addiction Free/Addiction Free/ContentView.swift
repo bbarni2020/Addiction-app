@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State private var isAuthenticated = true
+    @State private var isAuthenticated = false
     var body: some View {
         ZStack {
             if isAuthenticated {
