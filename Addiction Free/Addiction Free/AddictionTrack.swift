@@ -10,12 +10,10 @@ import SwiftData
 
 struct AddictionTrack: View {
     @Environment(\.modelContext) private var modelContext
-
     var body: some View {
         VStack{
             HStack{
                 Button() {
-                    print(UITraitCollection.current.userInterfaceStyle == .light)
                 } label: {
                     Text("I'm still okay")
                                 .foregroundColor(.white)
@@ -25,7 +23,7 @@ struct AddictionTrack: View {
                 }
                 .background(Color.green.opacity(0.8))
                 .cornerRadius(12)
-                .shadow(color: Color.white.opacity(0.3), radius: 5, x: 0, y: 5)
+                .shadow(color: Color.primary.opacity(0.3), radius: 5, x: 0, y: 5)
                 .padding([.top, .leading, .bottom])
                 Button() {
                     addSmokeWorkout()
@@ -38,7 +36,7 @@ struct AddictionTrack: View {
                 }
                 .background(Color.red.opacity(0.8))
                 .cornerRadius(12)
-                .shadow(color: Color.white.opacity(0.3), radius: 5, x: 0, y: 5) //secondary
+                .shadow(color: Color.primary.opacity(0.3), radius: 5, x: 0, y: 5)
                 .padding([.top, .bottom, .trailing])
             }
         }

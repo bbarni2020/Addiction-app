@@ -24,7 +24,7 @@ struct Home: View {
             }
             .navigationTitle("Home")
             .toolbar {
-                NavigationLink(destination: CalendarHeader()) {
+                NavigationLink(destination: SettingsView()) {
                     Image(systemName: "gear")
                         .foregroundStyle(Color.primary)
                 }
