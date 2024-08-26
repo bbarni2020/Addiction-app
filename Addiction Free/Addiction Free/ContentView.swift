@@ -15,7 +15,8 @@ struct ContentView: View {
             if isAuthenticated {
                     Home()
             } else {
-                PasswordView(isAuthenticated: $isAuthenticated)
+                //PasswordView(isAuthenticated: $isAuthenticated)
+                PincodeSet()
                 }
             }
         }

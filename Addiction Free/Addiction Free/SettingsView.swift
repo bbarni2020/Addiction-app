@@ -2,7 +2,7 @@
 //  SettingsView.swift
 //  Addiction Free
 //
-//  Created by ScriptKid on 26/08/2024.
+//  Created by MasterbrosDev, Barnabás on 26/08/2024.
 //
 
 import SwiftUI
