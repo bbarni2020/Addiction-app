@@ -15,7 +15,7 @@ I’d like to utilize an app to help people overcome addiction. The idea is to g
 
 ## 🔒 Privacy
 
-All data will remain local on the user’s device because I want to respect the user’s privacy. The app would be open source.
+All data will remain **local** on the user’s device because I want to respect the user’s privacy. The app would be open source.
 
 ## 🏁 Goals
 
@@ -23,7 +23,7 @@ All data will remain local on the user’s device because I want to respect the 
 - ✅ Project desription
 - ✅ Python prototype
 - ✅ Design the app interface
-- ☑️ Write the app's front end
+- ✅ Write the app's front end
 - ☑️ Write the app's back end
 - ☑️ Make the icon name of the app
 - ☑️ Finish the app and start advertising
