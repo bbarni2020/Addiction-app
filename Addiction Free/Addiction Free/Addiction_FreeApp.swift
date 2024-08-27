@@ -13,6 +13,7 @@ struct Addiction_FreeApp: App {
         WindowGroup {
             ContentView()
                 .modelContainer(for: [Activity.self, Status.self])
+                .accentColor(.primary)
         }
     }
 }

@@ -24,6 +24,7 @@
 		05D05BE62C76664800D5BF9A /* AddictionTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BE52C76664800D5BF9A /* AddictionTrack.swift */; };
 		05D05BEC2C766A2C00D5BF9A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BEB2C766A2C00D5BF9A /* Activity.swift */; };
 		05D05BF02C766A8500D5BF9A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BEF2C766A8500D5BF9A /* Status.swift */; };
+		05E4738C2C7DD8A000F1C24B /* OnBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E4738B2C7DD8A000F1C24B /* OnBoard.swift */; };
 		05ED0F562C7C737C0056F258 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED0F552C7C737C0056F258 /* Color.swift */; };
 		05ED0F582C7C7E760056F258 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED0F572C7C7E760056F258 /* Streak.swift */; };
 		05ED0F5A2C7C87D40056F258 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED0F592C7C87D40056F258 /* SettingsView.swift */; };
@@ -69,6 +70,7 @@
 		05D05BE52C76664800D5BF9A /* AddictionTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddictionTrack.swift; sourceTree = "<group>"; };
 		05D05BEB2C766A2C00D5BF9A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		05D05BEF2C766A8500D5BF9A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		05E4738B2C7DD8A000F1C24B /* OnBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoard.swift; sourceTree = "<group>"; };
 		05ED0F552C7C737C0056F258 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		05ED0F572C7C7E760056F258 /* Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
 		05ED0F592C7C87D40056F258 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				05ED0F5F2C7C969D0056F258 /* PincodeSet.swift */,
+				05E4738B2C7DD8A000F1C24B /* OnBoard.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				05ED0F582C7C7E760056F258 /* Streak.swift in Sources */,
 				0511EE872C70CFE90047AE5E /* PasscodeIndicatorView.swift in Sources */,
 				05ED0F562C7C737C0056F258 /* Color.swift in Sources */,
+				05E4738C2C7DD8A000F1C24B /* OnBoard.swift in Sources */,
 				0511EE832C70CF9D0047AE5E /* PasswordView.swift in Sources */,
 				052E7A742C774D5100436996 /* Date+Extension.swift in Sources */,
 				054388E12C6FC37800330673 /* Addiction_FreeApp.swift in Sources */,
@@ -533,6 +537,9 @@
 				DEVELOPMENT_TEAM = ZN77QZLDJS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Addiction-Free-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use Face ID to simplify your login process.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -542,7 +549,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.masterbros.Addiction-Free";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -566,6 +573,9 @@
 				DEVELOPMENT_TEAM = ZN77QZLDJS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Addiction-Free-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use Face ID to simplify your login process.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -575,7 +585,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.masterbros.Addiction-Free";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
