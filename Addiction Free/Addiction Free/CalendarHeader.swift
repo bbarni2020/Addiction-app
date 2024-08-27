@@ -29,6 +29,7 @@ struct CalendarHeader: View {
                         }
                     }
                     .buttonStyle(.borderedProminent)
+                    .accentColor(.black)
                 }
                 .buttonStyle(.bordered)
                 CalendarView(date: monthDate, selectedActivity: selectedActivity)

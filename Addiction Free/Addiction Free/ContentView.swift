@@ -15,18 +15,19 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             if isAuthenticated {
-                    Home()
+                Home()
             } else {
                 if isFirstTime {
                     PasswordView(isAuthenticated: $isAuthenticated)
                 } else {
-                    PincodeSet()
-                }
+                    OnBoard()
                 }
             }
         }
-        
     }
+}
+
+
 
 #Preview {
     ContentView()

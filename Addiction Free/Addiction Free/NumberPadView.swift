@@ -55,7 +55,7 @@ struct NumberPadView: View {
             if isBiometricAvailable {
                 if faceid {
                     Button(action: authenticate) {
-                        Image(systemName: "faceid")
+                        Image(systemName: biometricType == .faceID ? "faceid" : "touchid")
                             .font(.title)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)

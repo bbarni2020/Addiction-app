@@ -30,6 +30,7 @@
 		05ED0F5A2C7C87D40056F258 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED0F592C7C87D40056F258 /* SettingsView.swift */; };
 		05ED0F5C2C7C94AC0056F258 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED0F5B2C7C94AC0056F258 /* KeychainHelper.swift */; };
 		05ED0F602C7C969D0056F258 /* PincodeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED0F5F2C7C969D0056F258 /* PincodeSet.swift */; };
+		05F0860E2C7E29D200463D98 /* AddActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0860D2C7E29D200463D98 /* AddActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		05ED0F592C7C87D40056F258 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		05ED0F5B2C7C94AC0056F258 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		05ED0F5F2C7C969D0056F258 /* PincodeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PincodeSet.swift; sourceTree = "<group>"; };
+		05F0860D2C7E29D200463D98 /* AddActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				05ED0F5F2C7C969D0056F258 /* PincodeSet.swift */,
 				05E4738B2C7DD8A000F1C24B /* OnBoard.swift */,
+				05F0860D2C7E29D200463D98 /* AddActivity.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				0511EE832C70CF9D0047AE5E /* PasswordView.swift in Sources */,
 				052E7A742C774D5100436996 /* Date+Extension.swift in Sources */,
 				054388E12C6FC37800330673 /* Addiction_FreeApp.swift in Sources */,
+				05F0860E2C7E29D200463D98 /* AddActivity.swift in Sources */,
 				0511EE8A2C70E3830047AE5E /* Home.swift in Sources */,
 				05ED0F5C2C7C94AC0056F258 /* KeychainHelper.swift in Sources */,
 				05D05BF02C766A8500D5BF9A /* Status.swift in Sources */,
