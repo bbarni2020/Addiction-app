@@ -10,17 +10,20 @@ import CoreHaptics
 
 struct PincodeSet: View {
     @State var isFirst = true
-    @State var ready = false
     @State private var passcode = ""
     @State private var Fpasscode = ""
     @State private var Spasscode = ""
     @State var wrong = false
     @State var savedBio = false
-    @State var clicked = false
+    @State private var showingPop = false
+    @State var ready = false
+    @State var home = false
+    @State var nextB = true
     let faceid = UserDefaults.standard.bool(forKey: "faceid")
     let screen = UIScreen.main.bounds.width
     let isFirstTime = UserDefaults.standard.bool(forKey: "firstTime")
     @State private var engine: CHHapticEngine?
+    @State private var selected = false
     var body: some View {
         if ready == false {
             VStack {
@@ -57,7 +60,7 @@ struct PincodeSet: View {
                 make()})
             .onAppear(perform: loading)
         } else {
-            if clicked {
+            if home {
                 Home()
             } else {
                 VStack {
@@ -70,24 +73,47 @@ struct PincodeSet: View {
                     if isFirstTime {
                         //nothing
                     } else {
-                        Button {
-                            clicked = true
-                        } label: {
-                            Text("Next")
-                                .fontWeight(.bold)
-                                .padding()
-                                .background(Color.primary)
-                                .foregroundStyle(Color.secondary)
-                                .cornerRadius(8)
-                                .frame(width: screen * 0.7)
+                        if nextB {
+                            Button {
+                                showingPop = true
+                            } label: {
+                                Text("Next")
+                                    .fontWeight(.bold)
+                                    .padding()
+                                    .background(Color.primary)
+                                    .foregroundStyle(Color.secondary)
+                                    .cornerRadius(8)
+                                    .frame(width: screen * 0.7)
+                            }
+                        } else {
+                            Button {
+                                let _: Void = UserDefaults.standard.set(true, forKey: "faceid")
+                                home = true
+                            } label: {
+                                Text("Start using the app")
+                                    .fontWeight(.bold)
+                                    .padding()
+                                    .background(Color.primary)
+                                    .foregroundStyle(Color.secondary)
+                                    .cornerRadius(8)
+                                    .frame(width: screen * 0.7)
+                            }
                         }
                     }
                 }
                 .onAppear(perform: load)
+                .popover(isPresented: $showingPop) {
+                    AddActivity(selected: $selected)
+                .onChange(of: selected){
+                    if selected {
+                        nextB = false
+                        showingPop = false
+                        }
+                    }
+                }
             }
         }
     }
-    
     
     private func make() {
         guard passcode.count == 6 else { return }

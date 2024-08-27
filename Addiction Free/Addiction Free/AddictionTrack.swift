@@ -51,18 +51,15 @@ struct AddictionTrack: View {
     }
 
     func addSmokeWorkout() {
-        let fetchDescriptor = FetchDescriptor<Activity>(
-            predicate: #Predicate { $0.name == "Smoke" }
-        )
+        let fetchDescriptor = FetchDescriptor<Activity>()
         
-
         let activities = try? modelContext.fetch(fetchDescriptor)
         let smokeActivity: Activity
 
         if let activity = activities?.first {
             smokeActivity = activity
         } else {
-            smokeActivity = Activity(name: "Smoke", hexColor: "000000")
+            smokeActivity = Activity(name: "🚬 Smoke", hexColor: "000000")
             modelContext.insert(smokeActivity)
         }
 
