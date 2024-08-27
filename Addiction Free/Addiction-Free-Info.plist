@@ -5,11 +5,11 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>NSFaceIDUsageDescription</key>
-			<string></string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
+			<string></string>
+			<key>NSFaceIDUsageDescription</key>
 			<string></string>
 		</dict>
 	</array>

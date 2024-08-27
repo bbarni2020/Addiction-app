@@ -10,7 +10,31 @@ import SwiftUI
 import SwiftUI
 import SwiftData
 
+struct DeviceChecker {
+    
+    private func getDeviceIdentifier() -> String {
+        var systemInfo = utsname()
+        uname(&systemInfo)
+        let machineMirror = Mirror(reflecting: systemInfo.machine)
+        let identifier = machineMirror.children.compactMap { element in
+            element.value as? Int8
+        }.map { element in
+            String(UnicodeScalar(UInt8(element)))
+        }.joined()
+        return identifier
+    }
+    
+    func isDeviceSE2orSE3() -> Bool {
+        let deviceIdentifier = getDeviceIdentifier()
+        let se2Identifier = "iPhone12,8"
+        let se3Identifier = "iPhone14,6"
+        
+        return deviceIdentifier == se2Identifier || deviceIdentifier == se3Identifier
+    }
+}
+
 struct CalendarView: View {
+    let deviceChecker = DeviceChecker()
     let date: Date
     let daysOfWeek = Date.capitalizedFirstLettersOfWeekdays
     let columns = Array(repeating: GridItem(.flexible()), count: 7)
@@ -45,29 +69,55 @@ struct CalendarView: View {
             LazyVGrid(columns: columns) {
                 ForEach(days, id: \.self) { day in
                     if day.monthInt == date.monthInt {
-                        Text(day.formatted(.dateTime.day()))
-                            .fontWeight(.bold)
-                            .foregroundStyle(Color.primary)
-                            .frame(maxWidth: .infinity, minHeight: 40)
-                            .background(
-                                Circle()
-                                    .foregroundStyle(
-                                        day.isToday ? .red.opacity(counts[day.dayInt] != nil ? 0.8 : 0.3)
-                                                    : color.opacity(counts[day.dayInt] != nil ? 0.8 : 0.3)
-                                    )
-                            )
-                            .overlay(alignment: .bottomTrailing) {
-                                if let count = counts[day.dayInt] {
-                                    Image(systemName: count <= 50 ? "\(count).circle.fill" : "plus.circle.fill")
-                                        .foregroundColor(Color.primary)
-                                        .imageScale(.medium)
-                                        .background(
-                                            Color(.systemBackground)
-                                                .clipShape(Circle())
+                        if deviceChecker.isDeviceSE2orSE3() {
+                            Text(day.formatted(.dateTime.day()))
+                                .fontWeight(.bold)
+                                .foregroundStyle(Color.primary)
+                                .frame(maxWidth: .infinity, minHeight: 34)
+                                .background(
+                                    Circle()
+                                        .foregroundStyle(
+                                            day.isToday ? .red.opacity(counts[day.dayInt] != nil ? 0.8 : 0.3)
+                                            : color.opacity(counts[day.dayInt] != nil ? 0.8 : 0.3)
                                         )
-                                        .offset(x: 5, y: 5)
+                                )
+                                .overlay(alignment: .bottomTrailing) {
+                                    if let count = counts[day.dayInt] {
+                                        Image(systemName: count <= 50 ? "\(count).circle.fill" : "plus.circle.fill")
+                                            .foregroundColor(Color.primary)
+                                            .imageScale(.medium)
+                                            .background(
+                                                Color(.systemBackground)
+                                                    .clipShape(Circle())
+                                            )
+                                            .offset(x: 5, y: 5)
+                                    }
                                 }
-                            }
+                        } else {
+                            Text(day.formatted(.dateTime.day()))
+                                .fontWeight(.bold)
+                                .foregroundStyle(Color.primary)
+                                .frame(maxWidth: .infinity, minHeight: 40)
+                                .background(
+                                    Circle()
+                                        .foregroundStyle(
+                                            day.isToday ? .red.opacity(counts[day.dayInt] != nil ? 0.8 : 0.3)
+                                            : color.opacity(counts[day.dayInt] != nil ? 0.8 : 0.3)
+                                        )
+                                )
+                                .overlay(alignment: .bottomTrailing) {
+                                    if let count = counts[day.dayInt] {
+                                        Image(systemName: count <= 50 ? "\(count).circle.fill" : "plus.circle.fill")
+                                            .foregroundColor(Color.primary)
+                                            .imageScale(.medium)
+                                            .background(
+                                                Color(.systemBackground)
+                                                    .clipShape(Circle())
+                                            )
+                                            .offset(x: 5, y: 5)
+                                    }
+                                }
+                        }
                     } else {
                         Text("")
                     }

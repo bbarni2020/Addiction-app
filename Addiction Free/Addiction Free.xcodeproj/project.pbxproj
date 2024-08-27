@@ -31,6 +31,7 @@
 		05ED0F5C2C7C94AC0056F258 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED0F5B2C7C94AC0056F258 /* KeychainHelper.swift */; };
 		05ED0F602C7C969D0056F258 /* PincodeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED0F5F2C7C969D0056F258 /* PincodeSet.swift */; };
 		05F0860E2C7E29D200463D98 /* AddActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0860D2C7E29D200463D98 /* AddActivity.swift */; };
+		05F086102C7E5F2600463D98 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0860F2C7E5F2600463D98 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		05ED0F5B2C7C94AC0056F258 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		05ED0F5F2C7C969D0056F258 /* PincodeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PincodeSet.swift; sourceTree = "<group>"; };
 		05F0860D2C7E29D200463D98 /* AddActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivity.swift; sourceTree = "<group>"; };
+		05F0860F2C7E5F2600463D98 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			children = (
 				052E7A732C774D5100436996 /* Date+Extension.swift */,
 				05ED0F552C7C737C0056F258 /* Color.swift */,
+				05F0860F2C7E5F2600463D98 /* NotificationManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			files = (
 				05ED0F5A2C7C87D40056F258 /* SettingsView.swift in Sources */,
 				052E7A712C774B4C00436996 /* CalendarHeader.swift in Sources */,
+				05F086102C7E5F2600463D98 /* NotificationManager.swift in Sources */,
 				052E7A6F2C774B3F00436996 /* CalendarView.swift in Sources */,
 				054388E32C6FC37800330673 /* ContentView.swift in Sources */,
 				05ED0F582C7C7E760056F258 /* Streak.swift in Sources */,
