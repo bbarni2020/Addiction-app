@@ -1,8 +1,6 @@
 import Foundation
 import UserNotifications
-
-import Foundation
-import UserNotifications
+import SwiftData
 
 class NotificationManager {
     
@@ -58,7 +56,7 @@ class NotificationManager {
             scheduleHourlyQuoteNotification(at: hour)
         }
         
-        scheduleDailyCheckInNotification()
+        scheduleDailyCheckInNotification(streak: -1)
         
         isNotificationsEnabled = true
     }
@@ -87,10 +85,23 @@ class NotificationManager {
         UNUserNotificationCenter.current().add(request)
     }
     
-    private func scheduleDailyCheckInNotification() {
+    private func scheduleDailyCheckInNotification(streak: Int) {
+        let streak = UserDefaults.standard.integer(forKey: "streak")
         let content = UNMutableNotificationContent()
         content.title = "Streak Report"
-        content.body = "Hello, you all right?"
+        
+        if streak == -1 {
+            content.body = "Start logging your activity to build a streak!"
+        } else {
+            if streak == 0 {
+                content.body = "You have no streak yet. Come back tomorrow, and keep going!"
+            } else {
+                let streakstr = String(streak)
+                content.body = "You haven't failed for \(streakstr) days."
+            }
+        }
+        
+        
         content.sound = .default
         
         var dateComponents = DateComponents()
@@ -100,6 +111,10 @@ class NotificationManager {
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         let request = UNNotificationRequest(identifier: "DailyStreakNotification", content: content, trigger: trigger)
         
-        UNUserNotificationCenter.current().add(request)
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Failed to schedule notification: \(error.localizedDescription)")
+            }
+        }
     }
 }

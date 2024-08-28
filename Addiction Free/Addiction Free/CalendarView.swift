@@ -77,8 +77,9 @@ struct CalendarView: View {
                                 .background(
                                     Circle()
                                         .foregroundStyle(
-                                            day.isToday ? .red.opacity(counts[day.dayInt] != nil ? 0.8 : 0.3)
-                                            : color.opacity(counts[day.dayInt] != nil ? 0.8 : 0.3)
+                                            day.isToday ? (counts[day.dayInt] != nil ? Color.red.opacity(0.8) : Color.green.opacity(0.8)) :
+                                            counts[day.dayInt] != nil ? Color.red.opacity(0.45) :
+                                                Color.green.opacity(0.3)
                                         )
                                 )
                                 .overlay(alignment: .bottomTrailing) {
@@ -101,8 +102,9 @@ struct CalendarView: View {
                                 .background(
                                     Circle()
                                         .foregroundStyle(
-                                            day.isToday ? .red.opacity(counts[day.dayInt] != nil ? 0.8 : 0.3)
-                                            : color.opacity(counts[day.dayInt] != nil ? 0.8 : 0.3)
+                                            day.isToday ? (counts[day.dayInt] != nil ? Color.red.opacity(0.8) : Color.green.opacity(0.8)) :
+                                            counts[day.dayInt] != nil ? Color.red.opacity(0.45) :
+                                                Color.green.opacity(0.3)
                                         )
                                 )
                                 .overlay(alignment: .bottomTrailing) {
