@@ -27,3 +27,14 @@ All data will remain **local** on the user’s device because I want to respect 
 - ☑️ Write the app's back end
 - ✅ Make the icon name of the app
 - ☑️ Finish the app and start advertising
+
+  ## 🔨 Usage
+-**Python program**: This project need no extra packages you just clone it and it will work
+-**Dart files**: These are flutter flow dart codes.
+-**Swift**: This is the application. This uses no packages
+
+## 📷 Screenshots & Demo Video
+![Description of the image](.Screenshots/Picture%201.png)
+![Description of the image](.Screenshots/Picture%202.png)
+![Description of the image](.Screenshots/Picture%203.png)
+![Description of the image](.Screenshots/Picture%204.png)
