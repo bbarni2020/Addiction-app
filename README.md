@@ -25,5 +25,5 @@ All data will remain **local** on the user’s device because I want to respect 
 - ✅ Design the app interface
 - ✅ Write the app's front end
 - ☑️ Write the app's back end
-- ☑️ Make the icon name of the app
+- ✅ Make the icon name of the app
 - ☑️ Finish the app and start advertising
