@@ -35,9 +35,9 @@ All data will remain **local** on the user’s device because I want to respect 
 
   ## 🔨 Usage
 
--**Python program**: This project need no extra packages you just clone it and it will work
--**Dart files**: These are flutter flow dart codes.
--**Swift**: This is the application. This uses no packages
+-**Python program**: This project need no extra packages you just clone it and it will work. But I made poetry.lock and requirements.txt  .
+-**Dart files**: These are flutter flow dart codes.  
+-**Swift**: This is the application. This uses no packages.  
 
 ## 📷 Screenshots & Demo Video
 
