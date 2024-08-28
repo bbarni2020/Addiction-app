@@ -87,6 +87,7 @@ struct PincodeSet: View {
                             }
                         } else {
                             Button {
+                                NotificationManager().turnOnNotifications()
                                 let _: Void = UserDefaults.standard.set(true, forKey: "faceid")
                                 home = true
                             } label: {

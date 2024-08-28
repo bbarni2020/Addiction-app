@@ -16,6 +16,7 @@ struct SettingsView: View {
     let faceid = UserDefaults.standard.bool(forKey: "faceid")
     let bio = UserDefaults.standard.string(forKey: "bio")
     @State private var isFaceIDEnabled: Bool = true
+    let not = NotificationManager()
     var body: some View {
         VStack{
             List {
@@ -90,6 +91,8 @@ struct SettingsView: View {
         }
         .onChange(of: isFaceIDEnabled, {oldValue, newValue in
             setbio()})
+        .onChange(of: isNotificationsEnabled, {oldValue, newValue in
+            notification()})
         .onAppear{load()}
     }
     
@@ -99,6 +102,11 @@ struct SettingsView: View {
         }
         if faceid == true {
             isFaceIDEnabled = true
+        }
+        if not.areNotificationsTurnedOn() {
+            isNotificationsEnabled = true
+        } else {
+            isNotificationsEnabled = false
         }
     }
     private func deleteAllData() {
@@ -141,6 +149,13 @@ struct SettingsView: View {
             let _: Void = UserDefaults.standard.set(true, forKey: "faceid")
         } else {
             let _: Void = UserDefaults.standard.set(false, forKey: "faceid")
+        }
+    }
+    private func notification() {
+        if isNotificationsEnabled {
+            not.turnOnNotifications()
+        } else {
+            not.turnOffNotifications()
         }
     }
 }
