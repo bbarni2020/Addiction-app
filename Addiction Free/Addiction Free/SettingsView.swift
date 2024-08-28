@@ -118,12 +118,6 @@ struct SettingsView: View {
         }
     }
     private func deleteAllData() {
-        let fetchDescriptorForActivities = FetchDescriptor<Activity>()
-                if let activities = try? modelContext.fetch(fetchDescriptorForActivities) {
-                    for activity in activities {
-                        modelContext.delete(activity)
-                    }
-                }
 
                 let fetchDescriptorStatus = FetchDescriptor<Status>()
                 if let statuses = try? modelContext.fetch(fetchDescriptorStatus) {
@@ -136,6 +130,12 @@ struct SettingsView: View {
     }
     
     private func resetApp() {
+        let fetchDescriptorForActivities = FetchDescriptor<Activity>()
+        if let activities = try? modelContext.fetch(fetchDescriptorForActivities) {
+            for activity in activities {
+                modelContext.delete(activity)
+            }
+        }
         deleteAllData()
         KeychainHelper.shared.deletePinCode()
         let _: Void = UserDefaults.standard.set(false, forKey: "firstTime")
