@@ -77,13 +77,21 @@ struct SettingsView: View {
                         Button("Cancel", role: .cancel) {}
                     }
                 }
+                Section(header: Text("Socials")) {
+                    Button(action: {
+                        UIApplication.shared.open(URL(string: "https://www.instagram.com/masterbrosdev")!)
+                    }) {
+                        Text("Instagram")
+                            .foregroundColor(.blue)
+                    }
+                }
             }
             Text("Version 0.1 (Beta)")
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .foregroundStyle(.gray)
                 .padding(.top)
-            Text("Made by MasterbrosDEV, Barnabás")
+            Text("Made by MasterBros Developers, Barnabás")
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .foregroundStyle(.gray)

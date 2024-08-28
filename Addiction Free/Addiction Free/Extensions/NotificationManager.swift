@@ -51,4 +51,55 @@ class NotificationManager {
         }
     }
     
+    func turnOnNotifications() {
+        guard isNotificationsEnabled else { return }
+        
+        for hour in 10...19 {
+            scheduleHourlyQuoteNotification(at: hour)
+        }
+        
+        scheduleDailyCheckInNotification()
+        
+        isNotificationsEnabled = true
+    }
+    
+    func turnOffNotifications() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        isNotificationsEnabled = false
+    }
+    
+    func areNotificationsTurnedOn() -> Bool {
+        return isNotificationsEnabled
+    }
+    
+    private func scheduleHourlyQuoteNotification(at hour: Int) {
+        let content = UNMutableNotificationContent()
+        content.title = "Log your progress in the app!"
+        content.body = quotes.randomElement() ?? "Keep it up!"
+        content.sound = .default
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = hour
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let request = UNNotificationRequest(identifier: "AddictionNotification_\(hour)", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request)
+    }
+    
+    private func scheduleDailyCheckInNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Streak Report"
+        content.body = "Hello, you all right?"
+        content.sound = .default
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 20
+        dateComponents.minute = 30
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let request = UNNotificationRequest(identifier: "DailyStreakNotification", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request)
+    }
 }
