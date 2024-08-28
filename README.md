@@ -48,10 +48,10 @@ All data will remain **local** on the user’s device because I want to respect 
 **PIN View**: All on device. Features FaceID and Touch ID.
 ![PIN View](Screenshots/Picture%203.png)
 
-**Home Page**: With a calendar view, streak counter.
+**Home Page**: With a calendar view, streak counter. The color of the day depends on the number of fails on that day.
 ![Home Page](Screenshots/Picture%201.png)
 
-**Settings Page**: Notification settings, FaceID/TouchID settings, PIN reset and much mnore.
+**Settings Page**: Notification settings, FaceID/TouchID settings, PIN reset and much more.
 ![Settings](Screenshots/Picture%202.png)
 
 **Demo Video**: [Video](https://youtu.be/xlinS3cq34w)
