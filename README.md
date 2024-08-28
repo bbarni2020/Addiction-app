@@ -1,7 +1,7 @@
 # 📱 Addiction Free
 
-This is a solution I’ve developed, designed to help people tackle addiction through accountability and daily motivation *iOS Only*
-The *Screenshots* and the **Demo Video** are in the bottom of the readme.
+-This is a solution I’ve developed, designed to help people tackle addiction through accountability and daily motivation *iOS Only*
+-The *Screenshots* and the **Demo Video** are in the bottom of the readme.
 
 ## 🖋️ App's Description
 
