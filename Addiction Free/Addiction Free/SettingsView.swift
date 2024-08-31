@@ -17,6 +17,8 @@ struct SettingsView: View {
     let bio = UserDefaults.standard.string(forKey: "bio")
     @State private var isFaceIDEnabled: Bool = true
     let not = NotificationManager()
+    let biom = FaceIDManager()
+    @State private var shouldNavigate = false
     var body: some View {
         VStack{
             List {
@@ -40,8 +42,10 @@ struct SettingsView: View {
                             Text("Touch ID")
                         }
                     }
-                    
-                    NavigationLink(destination: PincodeSet()) {
+                    Button() {
+                        biom.disableFaceID()
+                        shouldNavigate = true
+                    } label: {
                         Text("Reset PIN")
                             .foregroundStyle(.blue)
                     }
@@ -86,12 +90,15 @@ struct SettingsView: View {
                     }
                 }
             }
-            Text("Version 0.1 (Beta)")
-                .font(.footnote)
+            NavigationLink(destination: PincodeSet(), isActive: $shouldNavigate) {
+                EmptyView()
+            }
+            Text("Thanks to Stewart Lynch for Date extension")
+                .font(.system(size: 7))
                 .frame(maxWidth: .infinity, alignment: .center)
                 .foregroundStyle(.gray)
-                .padding(.top)
-            Text("Thanks to Stewart Lynch for Date extension")
+                .padding(.bottom, 10)
+            Text("Version 0.1 (Beta)")
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .foregroundStyle(.gray)
@@ -109,11 +116,10 @@ struct SettingsView: View {
     }
     
     private func load() {
-        if faceid == false {
-            isFaceIDEnabled = false
-        }
-        if faceid == true {
+        if biom.isFaceIDTurnedOn() {
             isFaceIDEnabled = true
+        } else {
+            isFaceIDEnabled = false
         }
         if not.areNotificationsTurnedOn() {
             isNotificationsEnabled = true
@@ -158,9 +164,9 @@ struct SettingsView: View {
     }
     private func setbio() {
         if isFaceIDEnabled {
-            let _: Void = UserDefaults.standard.set(true, forKey: "faceid")
+            biom.enableFaceID()
         } else {
-            let _: Void = UserDefaults.standard.set(false, forKey: "faceid")
+            biom.disableFaceID()
         }
     }
     private func notification() {

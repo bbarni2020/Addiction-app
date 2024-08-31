@@ -19,6 +19,7 @@ struct PincodeSet: View {
     @State var ready = false
     @State var home = false
     @State var nextB = true
+    let biomanager = FaceIDManager()
     let faceid = UserDefaults.standard.bool(forKey: "faceid")
     let screen = UIScreen.main.bounds.width
     let isFirstTime = UserDefaults.standard.bool(forKey: "firstTime")
@@ -58,7 +59,6 @@ struct PincodeSet: View {
             }
             .onChange(of: passcode, {oldValue, newValue in
                 make()})
-            .onAppear(perform: loading)
         } else {
             if home {
                 Home()
@@ -141,12 +141,8 @@ struct PincodeSet: View {
             }
         }
     }
-    private func loading() {
-        savedBio = faceid
-        let _: Void = UserDefaults.standard.set(false, forKey: "faceid")
-    }
     private func load() {
-        let _: Void = UserDefaults.standard.set(savedBio, forKey: "faceid")
+        biomanager.enableFaceID()
     }
     
     

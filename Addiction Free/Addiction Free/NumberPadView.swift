@@ -13,7 +13,7 @@ struct NumberPadView: View {
     @Binding var passcode: String
     @State private var isBiometricAvailable = false
     @State private var biometricType: BiometricType = .none
-    let faceid = UserDefaults.standard.bool(forKey: "faceid")
+    let face = FaceIDManager()
     let bio = UserDefaults.standard.string(forKey: "bio")
     @State private var engine: CHHapticEngine?
     private let colums: [GridItem] = [
@@ -53,7 +53,7 @@ struct NumberPadView: View {
                     .contentShape(.rect)
             }
             if isBiometricAvailable {
-                if faceid {
+                if face.isFaceIDEnabled {
                     Button(action: authenticate) {
                         Image(systemName: biometricType == .faceID ? "faceid" : "touchid")
                             .font(.title)
@@ -66,6 +66,7 @@ struct NumberPadView: View {
         }
         .foregroundStyle(.primary)
         .onAppear(perform: prepareHaptics)
+        
         
     }
     enum BiometricType {
@@ -87,7 +88,7 @@ struct NumberPadView: View {
                     biometricType = .touchID
                     let _: Void = UserDefaults.standard.set("touch", forKey: "bio")
                 }
-                if faceid {
+                if face.isFaceIDEnabled {
                     authenticate()
                 }
             } else {
