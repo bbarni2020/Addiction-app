@@ -19,7 +19,7 @@ struct Home: View {
                     Text("How have you been doing with staying clear of your addiction?")
                         .font(.headline)
                         .multilineTextAlignment(.center)
-                        .padding()
+                        .padding(.horizontal, 5)
                         .cornerRadius(12)
                     AddictionTrack(count: $number)
             }
