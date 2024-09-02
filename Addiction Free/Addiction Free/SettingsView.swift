@@ -98,7 +98,7 @@ struct SettingsView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 .foregroundStyle(.gray)
                 .padding(.bottom, 10)
-            Text("Version 0.1 (Beta)")
+            Text("Version 0.1.1 (Beta)")
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .foregroundStyle(.gray)
