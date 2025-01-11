@@ -1,0 +1,4 @@
+[metadata]
+lock-version = "2.0"
+python-versions = ">=3.8,<3.13"
+content-hash = "7a4d3bf40a323c8c73ca53949788d82c6199e39dcf243e09e89c23fdee8ce8cf"
