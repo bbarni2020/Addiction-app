@@ -69,49 +69,6 @@ struct NumberPadView: View {
         
         
     }
-    enum BiometricType {
-            case none
-            case touchID
-            case faceID
-        }
-    private func checkBiometricStatus() {
-            let context = LAContext()
-            var error: NSError?
-            
-            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-                
-                isBiometricAvailable = true
-                if context.biometryType == .faceID {
-                    biometricType = .faceID
-                    let _: Void = UserDefaults.standard.set("face", forKey: "bio")
-                } else if context.biometryType == .touchID {
-                    biometricType = .touchID
-                    let _: Void = UserDefaults.standard.set("touch", forKey: "bio")
-                }
-                if face.isFaceIDEnabled {
-                    authenticate()
-                }
-            } else {
-                isBiometricAvailable = false
-                biometricType = .none
-            }
-        }
-    private func authenticate() {
-            let context = LAContext()
-            var error: NSError?
-            
-            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-                let reason = "Authenticate to access the app"
-                
-                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-                    DispatchQueue.main.async {
-                        if success {
-                            passcode = KeychainHelper.shared.getPinCode()!
-                        }
-                    }
-                }
-            }
-    }
     
     private func addValue(_ value: Int) {
         if passcode.count < 6 {
