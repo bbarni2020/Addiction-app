@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreHaptics
-
+import SwiftData
 struct PincodeSet: View {
     @State var isFirst = true
     @State private var passcode = ""
@@ -25,6 +25,8 @@ struct PincodeSet: View {
     let isFirstTime = UserDefaults.standard.bool(forKey: "firstTime")
     @State private var engine: CHHapticEngine?
     @State private var selected = false
+    @State private var selectedDate = Date()
+    @Environment(\.modelContext) private var modelContext
     var body: some View {
         if ready == false {
             VStack {
@@ -64,7 +66,143 @@ struct PincodeSet: View {
                 Home()
             } else {
                 VStack {
-}
+                    if isFirstTime {
+                        
+                    } else {
+                        if nextB {
+                            VStack {
+                                Image(systemName: "checkmark.circle")
+                                    .foregroundStyle(Color.green)
+                                    .font(.system(size: screen * 0.17))
+                                Text("The pincode is saved successfully.")
+                                    .font(.headline)
+                                    .padding()
+                                Button {
+                                    showingPop = true
+                                } label: {
+                                    Text("Select your addiction")
+                                        .fontWeight(.bold)
+                                        .padding()
+                                        .background(Color.primary)
+                                        .foregroundStyle(Color.secondary)
+                                        .cornerRadius(8)
+                                        .frame(width: screen * 0.7)
+                                }
+                            }
+                        } else {
+                                
+                            Text("Set the last date of your addiction")
+                                .fontWeight(.bold)
+                                .font(.system(size: 25))
+                                .padding()
+                                .foregroundStyle(Color.primary)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                            DatePicker(
+                                "Select Date",
+                                selection: $selectedDate,
+                                in: ...Date(),
+                                displayedComponents: [.date, .hourAndMinute]
+                            )
+                            .datePickerStyle(.graphical)
+                            .padding()
+                            Button {
+                                let fetchDescriptor = FetchDescriptor<Activity>()
+                                
+                                let activities = try? modelContext.fetch(fetchDescriptor)
+                                let smokeActivity: Activity
+
+                                if let activity = activities?.first {
+                                    smokeActivity = activity
+                                } else {
+                                    smokeActivity = Activity(name: "🚬 Smoke", hexColor: "000000")
+                                    modelContext.insert(smokeActivity)
+                                }
+
+                                let newStatus = Status(date: selectedDate)
+                                smokeActivity.statuses.append(newStatus)
+
+                                try? modelContext.save()
+                                NotificationManager().turnOnNotifications()
+                                let _: Void = UserDefaults.standard.set(
+                                    true,
+                                    forKey: "faceid"
+                                )
+                                AFFunc().refreshWidget()
+                                home = true
+                            } label: {
+                                Text("Save")
+                                    .fontWeight(.bold)
+                                    .padding()
+                                    .background(Color.primary)
+                                    .foregroundStyle(Color.secondary)
+                                    .cornerRadius(8)
+                                    .frame(width: screen * 0.7)
+                            }
+                            Text("or")
+                                .font(.title3)
+                                .frame(maxWidth: .infinity, minHeight: 60)
+                                .foregroundColor(Color.primary)
+                                .cornerRadius(15)
+                                .padding(.horizontal)
+                            Button {
+                                NotificationManager().turnOnNotifications()
+                                let _: Void = UserDefaults.standard.set(
+                                    true,
+                                    forKey: "faceid"
+                                )
+                                AFFunc().refreshWidget()
+                                home = true
+                            } label: {
+                                Text("Make the first log later")
+                                    .fontWeight(.bold)
+                                    .padding()
+                                    .background(Color.primary)
+                                    .foregroundStyle(Color.secondary)
+                                    .cornerRadius(8)
+                                    .frame(width: screen * 0.7)
+                            }
+                        }
+                    }
+                }
+                .onAppear(perform: load)
+                .popover(isPresented: $showingPop) {
+                    AddActivity(selected: $selected)
+                        .onChange(of: selected){
+                            if selected {
+                                nextB = false
+                                showingPop = false
+                            }
+                        }
+                }
+            }
+        }
+    }
+    
+    private func make() {
+        guard passcode.count == 6 else { return }
+        Task {
+            try? await Task.sleep(nanoseconds: 125_000_000)
+            if isFirst == true {
+                Fpasscode = passcode
+                passcode = ""
+                isFirst = false
+            } else {
+                Spasscode = passcode
+                passcode = ""
+                if Spasscode == Fpasscode {
+                    KeychainHelper.shared.deletePinCode()
+                    KeychainHelper.shared.savePinCode(Spasscode)
+                    ready = true
+                } else {
+                    Spasscode = ""
+                    Fpasscode = ""
+                    passcode = ""
+                    isFirst = true
+                    wrong = true
+                }
+            }
+        }
+    }
     private func load() {
         biomanager.enableFaceID()
     }

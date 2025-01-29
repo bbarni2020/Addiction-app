@@ -19,6 +19,7 @@ import SwiftData
     }
 }
 
+
 extension Activity {
     @MainActor
     static var preview: ModelContainer {
@@ -40,6 +41,9 @@ extension Activity {
         // Calculate the difference in days between the last workout and now
         let calendar = Calendar.current
         let daysSince = calendar.dateComponents([.day], from: lastLog.date, to: Date()).day
+        let sharedDefaults = UserDefaults(suiteName: "group.dev.masterbros.AddictionFree")
+        sharedDefaults?.set(lastLog.date, forKey: "lastLog")
+        UserDefaults.standard.set(daysSince, forKey: "streak")
         
         return daysSince
     }

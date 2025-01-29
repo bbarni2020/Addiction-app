@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import CoreHaptics
+import WidgetKit
 
 struct AddictionTrack: View {
     @Environment(\.modelContext) private var modelContext
@@ -18,6 +19,7 @@ struct AddictionTrack: View {
             HStack{
                 Button() {
                     playHapticFeedback(for: .success)
+                    AFFunc().refreshWidget() 
                 } label: {
                     Text("I'm still okay")
                                 .foregroundColor(.white)
@@ -32,6 +34,7 @@ struct AddictionTrack: View {
                 Button() {
                     playHapticFeedback(for: .failure)
                     addSmokeWorkout()
+                    AFFunc().refreshWidget()
                 } label: {
                     Text("I failed")
                                 .foregroundColor(.white)

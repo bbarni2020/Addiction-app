@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,11 @@
 		054388F22C6FC37D00330673 /* Addiction_FreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054388F12C6FC37D00330673 /* Addiction_FreeTests.swift */; };
 		054388FC2C6FC37D00330673 /* Addiction_FreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054388FB2C6FC37D00330673 /* Addiction_FreeUITests.swift */; };
 		054388FE2C6FC37D00330673 /* Addiction_FreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054388FD2C6FC37D00330673 /* Addiction_FreeUITestsLaunchTests.swift */; };
+		0578E5922CCD8E7600132E0B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CBE6072CC172C400E1EF86 /* WidgetKit.framework */; };
+		0578E5932CCD8E7600132E0B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CBE6092CC172C500E1EF86 /* SwiftUI.framework */; };
+		0578E5A42CCD8E7B00132E0B /* StreakExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0578E5912CCD8E7600132E0B /* StreakExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		05B884462CDF842900EADBAF /* AFFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B884452CDF842900EADBAF /* AFFunc.swift */; };
+		05BC1F212CCE3985004DCC73 /* StreakDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC1F202CCE3985004DCC73 /* StreakDataFetcher.swift */; };
 		05D05BE62C76664800D5BF9A /* AddictionTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BE52C76664800D5BF9A /* AddictionTrack.swift */; };
 		05D05BEC2C766A2C00D5BF9A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BEB2C766A2C00D5BF9A /* Activity.swift */; };
 		05D05BF02C766A8500D5BF9A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D05BEF2C766A8500D5BF9A /* Status.swift */; };
@@ -50,9 +55,32 @@
 			remoteGlobalIDString = 054388DC2C6FC37800330673;
 			remoteInfo = "Addiction Free";
 		};
+		0578E5A22CCD8E7B00132E0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 054388D52C6FC37800330673 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0578E5902CCD8E7600132E0B;
+			remoteInfo = StreakExtension;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		05CBE6202CC172C900E1EF86 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0578E5A42CCD8E7B00132E0B /* StreakExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		05118A5E2CDD2C5900C9E364 /* Addiction Free.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Addiction Free.entitlements"; sourceTree = "<group>"; };
+		05118A5F2CDD2C7300C9E364 /* StreakExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StreakExtension.entitlements; sourceTree = "<group>"; };
 		0511EE822C70CF9D0047AE5E /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		0511EE842C70CFCC0047AE5E /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 		0511EE862C70CFE80047AE5E /* PasscodeIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeIndicatorView.swift; sourceTree = "<group>"; };
@@ -70,6 +98,11 @@
 		054388F72C6FC37D00330673 /* Addiction FreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Addiction FreeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		054388FB2C6FC37D00330673 /* Addiction_FreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addiction_FreeUITests.swift; sourceTree = "<group>"; };
 		054388FD2C6FC37D00330673 /* Addiction_FreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addiction_FreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0578E5912CCD8E7600132E0B /* StreakExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StreakExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		05B884452CDF842900EADBAF /* AFFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFFunc.swift; sourceTree = "<group>"; };
+		05BC1F202CCE3985004DCC73 /* StreakDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakDataFetcher.swift; sourceTree = "<group>"; };
+		05CBE6072CC172C400E1EF86 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		05CBE6092CC172C500E1EF86 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		05D05BE52C76664800D5BF9A /* AddictionTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddictionTrack.swift; sourceTree = "<group>"; };
 		05D05BEB2C766A2C00D5BF9A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		05D05BEF2C766A8500D5BF9A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -83,6 +116,20 @@
 		05F0860F2C7E5F2600463D98 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		05F11F0A2C82F8E400AEBFEF /* FaceIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0578E5A52CCD8E7B00132E0B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0578E5902CCD8E7600132E0B /* StreakExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0578E5942CCD8E7600132E0B /* Streak */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (0578E5A52CCD8E7B00132E0B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Streak; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		054388DA2C6FC37800330673 /* Frameworks */ = {
@@ -103,6 +150,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0578E58E2CCD8E7600132E0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0578E5932CCD8E7600132E0B /* SwiftUI.framework in Frameworks */,
+				0578E5922CCD8E7600132E0B /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +201,8 @@
 				05ED0F552C7C737C0056F258 /* Color.swift */,
 				05F0860F2C7E5F2600463D98 /* NotificationManager.swift */,
 				05F11F0A2C82F8E400AEBFEF /* FaceIDManager.swift */,
+				05BC1F202CCE3985004DCC73 /* StreakDataFetcher.swift */,
+				05B884452CDF842900EADBAF /* AFFunc.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -152,9 +210,12 @@
 		054388D42C6FC37800330673 = {
 			isa = PBXGroup;
 			children = (
+				05118A5F2CDD2C7300C9E364 /* StreakExtension.entitlements */,
 				054388DF2C6FC37800330673 /* Addiction Free */,
 				054388F02C6FC37D00330673 /* Addiction FreeTests */,
 				054388FA2C6FC37D00330673 /* Addiction FreeUITests */,
+				0578E5942CCD8E7600132E0B /* Streak */,
+				05CBE6062CC172C400E1EF86 /* Frameworks */,
 				054388DE2C6FC37800330673 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,6 +226,7 @@
 				054388DD2C6FC37800330673 /* Addiction Free.app */,
 				054388ED2C6FC37D00330673 /* Addiction FreeTests.xctest */,
 				054388F72C6FC37D00330673 /* Addiction FreeUITests.xctest */,
+				0578E5912CCD8E7600132E0B /* StreakExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +234,7 @@
 		054388DF2C6FC37800330673 /* Addiction Free */ = {
 			isa = PBXGroup;
 			children = (
+				05118A5E2CDD2C5900C9E364 /* Addiction Free.entitlements */,
 				05ED0F5E2C7C96790056F258 /* Onboarding */,
 				052E7A722C774D3500436996 /* Extensions */,
 				052E7A6D2C774B0900436996 /* Calendar */,
@@ -212,6 +275,15 @@
 			path = "Addiction FreeUITests";
 			sourceTree = "<group>";
 		};
+		05CBE6062CC172C400E1EF86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05CBE6072CC172C400E1EF86 /* WidgetKit.framework */,
+				05CBE6092CC172C500E1EF86 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		05D05BEA2C766A1A00D5BF9A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,10 +314,12 @@
 				054388D92C6FC37800330673 /* Sources */,
 				054388DA2C6FC37800330673 /* Frameworks */,
 				054388DB2C6FC37800330673 /* Resources */,
+				05CBE6202CC172C900E1EF86 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0578E5A32CCD8E7B00132E0B /* PBXTargetDependency */,
 			);
 			name = "Addiction Free";
 			productName = "Addiction Free";
@@ -288,6 +362,28 @@
 			productReference = 054388F72C6FC37D00330673 /* Addiction FreeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0578E5902CCD8E7600132E0B /* StreakExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0578E5A62CCD8E7B00132E0B /* Build configuration list for PBXNativeTarget "StreakExtension" */;
+			buildPhases = (
+				0578E58D2CCD8E7600132E0B /* Sources */,
+				0578E58E2CCD8E7600132E0B /* Frameworks */,
+				0578E58F2CCD8E7600132E0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0578E5942CCD8E7600132E0B /* Streak */,
+			);
+			name = StreakExtension;
+			packageProductDependencies = (
+			);
+			productName = StreakExtension;
+			productReference = 0578E5912CCD8E7600132E0B /* StreakExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -295,8 +391,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					054388DC2C6FC37800330673 = {
 						CreatedOnToolsVersion = 15.3;
@@ -308,6 +404,9 @@
 					054388F62C6FC37D00330673 = {
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = 054388DC2C6FC37800330673;
+					};
+					0578E5902CCD8E7600132E0B = {
+						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
@@ -327,6 +426,7 @@
 				054388DC2C6FC37800330673 /* Addiction Free */,
 				054388EC2C6FC37D00330673 /* Addiction FreeTests */,
 				054388F62C6FC37D00330673 /* Addiction FreeUITests */,
+				0578E5902CCD8E7600132E0B /* StreakExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -355,6 +455,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0578E58F2CCD8E7600132E0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -362,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B884462CDF842900EADBAF /* AFFunc.swift in Sources */,
 				05ED0F5A2C7C87D40056F258 /* SettingsView.swift in Sources */,
 				052E7A712C774B4C00436996 /* CalendarHeader.swift in Sources */,
 				05F086102C7E5F2600463D98 /* NotificationManager.swift in Sources */,
@@ -375,6 +483,7 @@
 				052E7A742C774D5100436996 /* Date+Extension.swift in Sources */,
 				054388E12C6FC37800330673 /* Addiction_FreeApp.swift in Sources */,
 				05F0860E2C7E29D200463D98 /* AddActivity.swift in Sources */,
+				05BC1F212CCE3985004DCC73 /* StreakDataFetcher.swift in Sources */,
 				0511EE8A2C70E3830047AE5E /* Home.swift in Sources */,
 				05ED0F5C2C7C94AC0056F258 /* KeychainHelper.swift in Sources */,
 				05D05BF02C766A8500D5BF9A /* Status.swift in Sources */,
@@ -403,6 +512,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0578E58D2CCD8E7600132E0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -415,6 +531,11 @@
 			isa = PBXTargetDependency;
 			target = 054388DC2C6FC37800330673 /* Addiction Free */;
 			targetProxy = 054388F82C6FC37D00330673 /* PBXContainerItemProxy */;
+		};
+		0578E5A32CCD8E7B00132E0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0578E5902CCD8E7600132E0B /* StreakExtension */;
+			targetProxy = 0578E5A22CCD8E7B00132E0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -543,9 +664,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Addiction Free/Addiction Free.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Addiction Free/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_PREVIEWS = YES;
@@ -563,7 +685,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.masterbros.addictionFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -582,9 +704,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Addiction Free/Addiction Free.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Addiction Free/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_PREVIEWS = YES;
@@ -602,7 +725,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.masterbros.addictionFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -619,7 +742,6 @@
 		054389052C6FC37D00330673 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -639,7 +761,6 @@
 		054389062C6FC37D00330673 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -659,7 +780,6 @@
 		054389082C6FC37D00330673 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZN77QZLDJS;
@@ -677,7 +797,6 @@
 		054389092C6FC37D00330673 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZN77QZLDJS;
@@ -689,6 +808,66 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Addiction Free";
+			};
+			name = Release;
+		};
+		0578E5A72CCD8E7B00132E0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StreakExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P6PV2R9443;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Streak/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Streak;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.9;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.masterbros.addictionFree.Streak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0578E5A82CCD8E7B00132E0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StreakExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P6PV2R9443;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Streak/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Streak;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.9;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.masterbros.addictionFree.Streak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -727,6 +906,15 @@
 			buildConfigurations = (
 				054389082C6FC37D00330673 /* Debug */,
 				054389092C6FC37D00330673 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0578E5A62CCD8E7B00132E0B /* Build configuration list for PBXNativeTarget "StreakExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0578E5A72CCD8E7B00132E0B /* Debug */,
+				0578E5A82CCD8E7B00132E0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
